@@ -5,10 +5,13 @@ import 'package:first_app/widgets/flat_buttons.dart';
 import 'package:first_app/widgets/social_media_buttons.dart';
 import 'package:first_app/widgets/white_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'package:first_app/controller/check_controller.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
-
+  LoginScreen({Key? key}) : super(key: key);
+  final CheckController ctrl = Get.put(CheckController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,11 +21,22 @@ class LoginScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 83,
+              height: 48,
             ),
-            Row(children: const [
-              WhiteText(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: const [FlatButtons("Skip", AppColors.black)],
+            ),
+            const SizedBox(
+              height: 14,
+            ),
+            Row(children: [
+              const WhiteText(
                   "Hi, Welcome Back!", 24, FontWeight.w600, AppColors.black),
+              const SizedBox(
+                width: 12.93,
+              ),
+              SizedBox(child: Image.asset("assets/images/handwave.png"))
             ]),
             const SizedBox(
               height: 5,
@@ -34,7 +48,8 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 50,
             ),
-            WhiteText("Email Address", 16, FontWeight.w500, AppColors.black),
+            const WhiteText(
+                "Email Address", 16, FontWeight.w500, AppColors.black),
             const SizedBox(
               height: 10,
             ),
@@ -43,7 +58,7 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            WhiteText("Password", 16, FontWeight.w500, AppColors.black),
+            const WhiteText("Password", 16, FontWeight.w500, AppColors.black),
             const SizedBox(
               height: 10,
             ),
@@ -54,22 +69,32 @@ class LoginScreen extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: const  [
-                Checkbox(
-
-                    value: false,
-                    onChanged: null,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(),
-                    )),
+              children:  [
                 SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: Obx(
+                    () => Checkbox(
+                      splashRadius: 10,
+                      shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(5.0))),
+                      value: ctrl.checkBool.value,
+                      onChanged: (value) {
+                        ctrl.checkBool.value = !ctrl.checkBool.value;
+                      },
+                    ),
+                  ),
+                ),
+                const SizedBox(
                   width: 10,
                 ),
-                WhiteText(
-                    "Remember me", 14, FontWeight.w400, AppColors.black),
-                SizedBox(
-                  width: 72,
+                const FittedBox(
+                    child: WhiteText(
+                        "Remember me", 14, FontWeight.w400, AppColors.black)),
+                const SizedBox(
+                  width: 100,
                 ),
+                const FlatButtons("Forgot Password?", AppColors.red)
               ],
             ),
             const SizedBox(
@@ -80,38 +105,47 @@ class LoginScreen extends StatelessWidget {
               height: 30,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                WhiteText("or Login with", 14, FontWeight.w400, AppColors.black)
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  height: 1,
+                  width: 110,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: AppColors.offWhite)),
+                ),
+                const WhiteText(
+                    "or Login with", 14, FontWeight.w400, AppColors.black),
+                Container(
+                  height: 1,
+                  width: 110,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: AppColors.offWhite)),
+                ),
               ],
             ),
             const SizedBox(
               height: 65,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: const [
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
                 SocialMediaButton(
-                    ImageIcon(AssetImage("assets/icons/facebook.png")),
-                    "Facebook"),
-                SizedBox(
+                    Image.asset("assets/images/facebook.png"), "Facebook"),
+                const SizedBox(
                   width: 23,
                 ),
                 SocialMediaButton(
-                    ImageIcon(AssetImage("assets/icons/google.png")), "Google"),
+                    Image.asset("assets/images/google.png"), "Google"),
               ],
             ),
             const SizedBox(
               height: 67,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                WhiteText("Don't have an account?", 14, FontWeight.w500,
-                    AppColors.black),
-                FlatButtons("Sign up", AppColors.red)
-              ],
-            )
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
+              WhiteText("Don't have an account?", 14, FontWeight.w500,
+                  AppColors.black),
+              FlatButtons("Sign up", AppColors.blue),
+            ])
           ],
         ),
       ),

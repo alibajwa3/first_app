@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class SocialMediaButton extends StatelessWidget {
   final String platformName;
-  final ImageIcon platformIcon;
+  final Image platformIcon;
 
   const SocialMediaButton(this.platformIcon, this.platformName, {Key? key})
       : super(key: key);
@@ -21,7 +21,7 @@ class SocialMediaButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            platformIcon,
+            SizedBox(height: 21, child: platformIcon),
             const SizedBox(width: 10,),
             Text(
               platformName,

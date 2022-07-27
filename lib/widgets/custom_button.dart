@@ -42,7 +42,7 @@ class CustomButton extends StatelessWidget {
                         size: 20,
                         Icons.arrow_forward_rounded,
                       )
-                    : const SizedBox()
+                    : const SizedBox(width: 0, height: 0,)
               ],
             )));
   }

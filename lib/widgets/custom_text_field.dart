@@ -18,7 +18,8 @@ class CustomTextField extends StatelessWidget {
             height: 50,
             width: Get.width,
             child: TextField(
-              style: const TextStyle(fontFamily: "Poppins", fontSize: 14),
+              textAlignVertical: TextAlignVertical.center,
+              style: const TextStyle(fontFamily: "Poppins", fontSize: 14,),
               keyboardType: keyBoardType,
               obscureText: usingForPassword ? true : false,
               decoration: InputDecoration(
@@ -31,3 +32,4 @@ class CustomTextField extends StatelessWidget {
     );
   }
 }
+

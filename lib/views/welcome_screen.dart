@@ -45,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 70,),
-          const CustomButton("Let's Start", true),
+          const Padding(padding: EdgeInsets.all(20), child: CustomButton("Let's Start", true)),
         ],
       ),
     );

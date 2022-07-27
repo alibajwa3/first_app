@@ -1,4 +1,7 @@
 import 'package:first_app/constant/colors.dart';
+import 'package:first_app/views/confirm_email.dart';
+import 'package:first_app/views/create_account.dart';
+import 'package:first_app/views/image_picker.dart';
 import 'package:first_app/views/login_screen.dart';
 import 'package:first_app/views/welcome_screen.dart';
 import 'package:first_app/widgets/custom_button.dart';
@@ -37,7 +40,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          body: LoginScreen(),
+          body: ImagePickerScreen(),
           ),
         );
   }

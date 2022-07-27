@@ -36,6 +36,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.5
   flutter_native_splash: ^2.2.6
+  pin_code_fields: ^7.4.0
+  multi_select_flutter: ^4.1.2
+  multiselect: ^0.0.7
+  image_picker: ^0.8.5+3
 
 dev_dependencies:
   flutter_test:
@@ -61,9 +65,14 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-      - assets/icons/facebook.png
-      - assets/icons/google.png
       - assets/images/girl.png
+      - assets/images/handwave.png
+      - assets/images/google.png
+      - assets/images/facebook.png
+      - assets/images/bga.png
+      - assets/images/bgb.png
+      - assets/images/bgc.png
+      - assets/images/bgd.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
