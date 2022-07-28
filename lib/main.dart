@@ -1,19 +1,15 @@
-import 'package:first_app/constant/colors.dart';
-import 'package:first_app/views/confirm_email.dart';
-import 'package:first_app/views/create_account.dart';
-import 'package:first_app/views/image_picker.dart';
+
+import 'package:first_app/views/dummy_view.dart';
+import 'package:first_app/views/home_screen.dart';
 import 'package:first_app/views/login_screen.dart';
-import 'package:first_app/views/welcome_screen.dart';
-import 'package:first_app/widgets/custom_button.dart';
-import 'package:first_app/widgets/custom_text_field.dart';
-import 'package:first_app/widgets/social_media_buttons.dart';
+import 'package:first_app/views/navigation_bar.dart';
+import 'package:first_app/widgets/gradient_container.dart';
+import 'package:first_app/widgets/services_tile.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-import 'widgets/white_text.dart';
-
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,7 +36,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          body: ImagePickerScreen(),
+          body: NavigationPage(),
           ),
         );
   }

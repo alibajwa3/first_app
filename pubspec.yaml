@@ -40,6 +40,7 @@ dependencies:
   multi_select_flutter: ^4.1.2
   multiselect: ^0.0.7
   image_picker: ^0.8.5+3
+  searchfield: ^0.6.7
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +74,25 @@ flutter:
       - assets/images/bgb.png
       - assets/images/bgc.png
       - assets/images/bgd.png
+      - assets/images/logoa.png
+      - assets/images/work.png
+      - assets/images/bg_rectangle.png
+      - assets/images/notifications.png
+      - assets/images/maps_ugc.png
+      - assets/images/ellipse_a.png
+      - assets/images/ellipse_b.png
+      - assets/images/first.png
+      - assets/images/second.png
+      - assets/images/third.png
+      - assets/images/first_icon.png
+      - assets/images/second_icon.png
+      - assets/images/third_icon.png
+      - assets/images/fourth_icon.png
+      - assets/images/fifth_icon.png
+      - assets/images/sixth_icon.png
+      - assets/images/seventh_icon.png
+      - assets/images/eigth_icon.png
+      - assets/images/ninth_icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

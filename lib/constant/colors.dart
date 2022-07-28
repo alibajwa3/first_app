@@ -7,4 +7,7 @@ class AppColors {
   static const black = Color(0xff111111);
   static const offWhite = Color(0xffC4C4C4);
   static const placeHolderColor = Color(0xffF1F1F1);
+  static const gradientFirst = Color(0xff1544BE);
+  static const gradientSecond = Color(0xff0075FF);
+
 }
