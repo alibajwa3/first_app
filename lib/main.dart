@@ -44,9 +44,9 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home:const Scaffold(
+        home: Scaffold(
 
-          body: ExploreScreen())
+          body: ExploreScreen(),)
 
           // ProfilesWidget("Graphic Designer", "Pakistan", 825, 45, "hjsjahd", "Ali Bajwa", "assets/images/bruce.png"))
 

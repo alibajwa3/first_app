@@ -13,7 +13,7 @@ class GradientContainer extends StatelessWidget {
     return Center(
       child: Container(
         height: isBeingUsedOnHomeScreen ? 215 : 150,
-        width: Get.width,
+        width: double.infinity,
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(20),
