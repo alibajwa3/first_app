@@ -26,13 +26,13 @@ class LoginScreen extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: const [FlatButtons("Skip", AppColors.black)],
+                children: const [FlatButtons(false, "Skip", AppColors.black)],
               ),
               const SizedBox(
                 height: 14,
               ),
               Row(children: [
-                const WhiteText(
+                const WhiteText(false,
                     "Hi, Welcome Back!", 24, FontWeight.w600, AppColors.black),
                 const SizedBox(
                   width: 12.93,
@@ -43,13 +43,13 @@ class LoginScreen extends StatelessWidget {
                 height: 5,
               ),
               Row(children: const [
-                WhiteText("Hello again, you've been missed!", 14, FontWeight.w400,
+                WhiteText(false, "Hello again, you've been missed!", 14, FontWeight.w400,
                     AppColors.black),
               ]),
               const SizedBox(
                 height: 50,
               ),
-              const WhiteText(
+              const WhiteText(false,
                   "Email Address", 16, FontWeight.w500, AppColors.black),
               const SizedBox(
                 height: 10,
@@ -59,7 +59,7 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
-              const WhiteText("Password", 16, FontWeight.w500, AppColors.black),
+              const WhiteText(false, "Password", 16, FontWeight.w500, AppColors.black),
               const SizedBox(
                 height: 10,
               ),
@@ -91,13 +91,13 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const Expanded(
                     child: FittedBox(
-                        child: WhiteText(
+                        child: WhiteText(false,
                             "Remember me", 14, FontWeight.w400, AppColors.black)),
                   ),
                   const SizedBox(
                     width: 40,
                   ),
-                  const Expanded(child: FlatButtons("Forgot Password?", AppColors.red))
+                  const Expanded(child: FlatButtons(false, "Forgot Password?", AppColors.red))
                 ],
               ),
               const SizedBox(
@@ -116,7 +116,7 @@ class LoginScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                         border: Border.all(color: AppColors.offWhite)),
                   ),
-                  const WhiteText(
+                  const WhiteText(false,
                       "or Login with", 14, FontWeight.w400, AppColors.black),
                   Container(
                     height: 1,
@@ -145,9 +145,9 @@ class LoginScreen extends StatelessWidget {
                 height: 67,
               ),
               Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
-                WhiteText("Don't have an account?", 14, FontWeight.w500,
+                WhiteText(false, "Don't have an account?", 14, FontWeight.w500,
                     AppColors.black),
-                FlatButtons("Sign up", AppColors.blue),
+                FlatButtons(false, "Sign up", AppColors.blue),
               ])
             ],
           ),

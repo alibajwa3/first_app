@@ -41,6 +41,8 @@ dependencies:
   multiselect: ^0.0.7
   image_picker: ^0.8.5+3
   searchfield: ^0.6.7
+  favorite_button: ^0.0.4
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:
@@ -93,6 +95,11 @@ flutter:
       - assets/images/seventh_icon.png
       - assets/images/eigth_icon.png
       - assets/images/ninth_icon.png
+      - assets/images/search.png
+      - assets/images/logo_first_offer.png
+      - assets/images/logo_second_offer.png
+      - assets/images/logo_third_offer.png
+      - assets/images/bruce.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

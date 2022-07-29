@@ -27,14 +27,14 @@ class ConfirmEmailScreen extends StatelessWidget {
           ),
           Container(
               alignment: Alignment.center,
-              child: const WhiteText(
+              child: const WhiteText(false,
                   "Confirm Your E-mail", 20, FontWeight.w700, AppColors.black)),
           const SizedBox(
             height: 15,
           ),
           Container(
             alignment: Alignment.center,
-            child: const WhiteText("Enter your 4 digits code", 14,
+            child: const WhiteText(false, "Enter your 4 digits code", 14,
                 FontWeight.w600, AppColors.black),
           ),
           const SizedBox(
@@ -42,7 +42,7 @@ class ConfirmEmailScreen extends StatelessWidget {
           ),
           Container(
               alignment: Alignment.center,
-              child: const WhiteText(
+              child: const WhiteText(false,
                   "example@gmail.com", 14, FontWeight.w400, AppColors.black)),
           const SizedBox(
             height: 60,
@@ -73,9 +73,9 @@ class ConfirmEmailScreen extends StatelessWidget {
             height: 60,
           ),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
-            WhiteText(
-                "Did you get the code?", 14, FontWeight.w500, AppColors.black),
-            FlatButtons("Please resend", AppColors.blue),
+            WhiteText(false,
+                "Did you get the code?", 14, FontWeight.w500, AppColors.black,),
+            FlatButtons( false, "Please resend", AppColors.blue),
           ]),
           const SizedBox(
             height: 30,

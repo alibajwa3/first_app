@@ -9,5 +9,6 @@ class AppColors {
   static const placeHolderColor = Color(0xffF1F1F1);
   static const gradientFirst = Color(0xff1544BE);
   static const gradientSecond = Color(0xff0075FF);
-
+  static const greyColor = Color(0xffEDF2F8);
+  static const goldenColor = Color(0xffFFB800);
 }

@@ -28,7 +28,7 @@ class ServicesTile extends StatelessWidget {
             Positioned(
                 top: 120,
                 left: 15,
-                child: WhiteText("\$$servicePrice", 10, FontWeight.w600, AppColors.white)),
+                child: WhiteText(false, "\$$servicePrice", 10, FontWeight.w600, AppColors.white)),
             Positioned(
               top: 105,
               left: 211,
@@ -53,7 +53,7 @@ class ServicesTile extends StatelessWidget {
             Positioned(
                 top: 97,
                 left: 15,
-                child: WhiteText(serviceDescription, 14, FontWeight.w500, AppColors.white))
+                child: WhiteText(false, serviceDescription, 14, FontWeight.w500, AppColors.white))
           ],
         ),
       ),

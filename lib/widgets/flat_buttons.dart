@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class FlatButtons extends StatelessWidget {
   final String buttonText;
   final Color color;
-  const FlatButtons(this.buttonText, this.color, {Key? key}) : super(key: key);
+  final bool wantUnderline;
+  const FlatButtons(this.wantUnderline, this.buttonText, this.color, {Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class FlatButtons extends StatelessWidget {
       onTap: null,
       child: Text(
         buttonText,
-        style: TextStyle(color: color, fontFamily: "Poppins"),
+        style: TextStyle(color: color, fontFamily: "Poppins", decoration: wantUnderline ? TextDecoration.underline : TextDecoration.none),
       ),
     );
     // return SizedBox(

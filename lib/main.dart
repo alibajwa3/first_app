@@ -1,9 +1,18 @@
 
+import 'package:first_app/views/confirm_email.dart';
+import 'package:first_app/views/create_account.dart';
 import 'package:first_app/views/dummy_view.dart';
+import 'package:first_app/views/explore_screen.dart';
 import 'package:first_app/views/home_screen.dart';
+import 'package:first_app/views/image_picker.dart';
 import 'package:first_app/views/login_screen.dart';
 import 'package:first_app/views/navigation_bar.dart';
+import 'package:first_app/views/offers_screen.dart';
+import 'package:first_app/views/welcome_screen.dart';
+import 'package:first_app/widgets/gigs.dart';
 import 'package:first_app/widgets/gradient_container.dart';
+import 'package:first_app/widgets/custom_offers_widgets.dart';
+import 'package:first_app/widgets/profiles.dart';
 import 'package:first_app/widgets/services_tile.dart';
 
 import 'package:flutter/material.dart';
@@ -35,9 +44,12 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: Scaffold(
-          body: NavigationPage(),
-          ),
+        home:const Scaffold(
+
+          body: ExploreScreen())
+
+          // ProfilesWidget("Graphic Designer", "Pakistan", 825, 45, "hjsjahd", "Ali Bajwa", "assets/images/bruce.png"))
+
         );
   }
 }

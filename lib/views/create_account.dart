@@ -25,12 +25,12 @@ class CreateAccountScreen extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          const WhiteText(
+          const WhiteText(false,
               "Create Account", 24, FontWeight.w600, AppColors.black),
           const SizedBox(
             height: 5,
           ),
-          const WhiteText("Stay connected and earn money", 14, FontWeight.w400,
+          const WhiteText(false, "Stay connected and earn money", 14, FontWeight.w400,
               AppColors.black),
           const SizedBox(
             height: 30,
@@ -71,7 +71,7 @@ class CreateAccountScreen extends StatelessWidget {
               width: 10,
             ),
             const FittedBox(
-                child: WhiteText(
+                child: WhiteText(false,
                     "I agree with the term and conditions", 14, FontWeight.w400, AppColors.black)),
           ]),
           const SizedBox(height: 50,),
@@ -86,7 +86,7 @@ class CreateAccountScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                     border: Border.all(color: AppColors.offWhite)),
               ),
-              const WhiteText(
+              const WhiteText(false,
                   "or Login with", 14, FontWeight.w400, AppColors.black),
               Container(
                 height: 1,
@@ -113,9 +113,9 @@ class CreateAccountScreen extends StatelessWidget {
           ),
           const SizedBox(height: 35,),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
-            WhiteText("Already have an account?", 14, FontWeight.w500,
+            WhiteText(false, "Already have an account?", 14, FontWeight.w500,
                 AppColors.black),
-            FlatButtons("Login", AppColors.blue),
+            FlatButtons(false, "Login", AppColors.blue),
           ])
         ]),
       ),

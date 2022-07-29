@@ -90,7 +90,7 @@ class ImagePickerScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const WhiteText("User Name", 16, FontWeight.w600, AppColors.black),
+            const WhiteText(false, "User Name", 16, FontWeight.w600, AppColors.black),
             const SizedBox(
               height: 15,
             ),
@@ -98,7 +98,7 @@ class ImagePickerScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const WhiteText("Location", 16, FontWeight.w600, AppColors.black),
+            const WhiteText(false ,"Location", 16, FontWeight.w600, AppColors.black),
             const SizedBox(
               height: 15,
             ),
@@ -133,7 +133,7 @@ class ImagePickerScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const WhiteText(
+            const WhiteText(false,
                 "Register As", 16, FontWeight.w600, AppColors.black),
             const SizedBox(
               height: 15,
@@ -171,12 +171,12 @@ class ImagePickerScreen extends StatelessWidget {
             const SizedBox(
               height: 5,
             ),
-            const WhiteText("You can change it from the settings after login",
+            const WhiteText(false, "You can change it from the settings after login",
                 10, FontWeight.w400, AppColors.black),
             const SizedBox(
               height: 10,
             ),
-            const WhiteText("Work As", 16, FontWeight.w600, AppColors.black),
+            const WhiteText(false, "Work As", 16, FontWeight.w600, AppColors.black),
             const SizedBox(
               height: 15,
             ),
