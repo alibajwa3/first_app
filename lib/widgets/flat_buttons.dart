@@ -4,16 +4,18 @@ class FlatButtons extends StatelessWidget {
   final String buttonText;
   final Color color;
   final bool wantUnderline;
-  const FlatButtons(this.wantUnderline, this.buttonText, this.color, {Key? key}) : super(key: key);
+  final FontWeight fontWeight;
+  final VoidCallback? onPressedFunction;
+  const FlatButtons(this.fontWeight, this.wantUnderline, this.buttonText, this.color, {Key? key, required this.onPressedFunction}) : super(key: key);
 
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: null,
+      onTap: onPressedFunction,
       child: Text(
         buttonText,
-        style: TextStyle(color: color, fontFamily: "Poppins", decoration: wantUnderline ? TextDecoration.underline : TextDecoration.none),
+        style: TextStyle(color: color, fontFamily: "Poppins", decoration: wantUnderline ? TextDecoration.underline : TextDecoration.none, fontWeight: fontWeight),
       ),
     );
     // return SizedBox(

@@ -31,7 +31,6 @@ class ProfilesWidget extends StatelessWidget {
     return Card(
       elevation: 1,
       child: Container(
-          // s
           height: Get.height * 0.3017,
           width: Get.width * 0.776,
           child: Padding(
@@ -137,71 +136,77 @@ class ProfilesWidget extends StatelessWidget {
                 ),
                 Wrap(
                   children: const [
-                    TagContainer("Design"),
-                    TagContainer("Graphic Design"),
-                    TagContainer("Web Design"),
-                    TagContainer("UI/UX Design"),
-                    TagContainer("Print Design"),
+                    TagContainer(10, "Design"),
+                    TagContainer(10, "Graphic Design"),
+                    TagContainer(10, "Web Design"),
+                    TagContainer(10, "UI/UX Design"),
+                    TagContainer(10, "Print Design"),
                   ],
                 ),
-                SizedBox(height: Get.height * 0.01111,),
-                Row(children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Container(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 4, horizontal: 10),
-                        decoration: BoxDecoration(
-                          border: Border.all(color: AppColors.black),
-                          borderRadius: BorderRadius.circular(3),
-                          color: AppColors.white,
-                        ),
-                        child: const Text(
-                          "View Profile",
-                          style: TextStyle(
-                              color: AppColors.black,
-                              fontSize: 12,
-                              fontFamily: "Poppins"),
-                        )),
-                  ),
-                  SizedBox(width: Get.width * 0.048,),
-                  InkWell(
-                    onTap: () {},
-                    child: Container(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 4, horizontal: 10),
-                        decoration: BoxDecoration(
-                          border: Border.all(color: AppColors.black),
-                          borderRadius: BorderRadius.circular(3),
-                          color: AppColors.white,
-                        ),
-                        child: const Text(
-                          "Chat",
-                          style: TextStyle(
-                              color: AppColors.black,
-                              fontSize: 12,
-                              fontFamily: "Poppins"),
-                        )),
-                  ),
-                  SizedBox(width: Get.width * 0.048,),
-                  InkWell(
-                    onTap: () {},
-                    child: Container(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 4, horizontal: 10),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(3),
-                          color: AppColors.blue,
-                        ),
-                        child: const Text(
-                          "View",
-                          style: TextStyle(
+                Padding(
+                  padding: EdgeInsets.only(right: 15, bottom: 4, left: 15, top: 16),
+                  child: SizedBox(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 4, horizontal: 10),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: AppColors.black),
+                              borderRadius: BorderRadius.circular(3),
                               color: AppColors.white,
-                              fontSize: 12,
-                              fontFamily: "Poppins"),
-                        )),
+                            ),
+                            child: const Text(
+                              "View Profile",
+                              style: TextStyle(
+                                  color: AppColors.black,
+                                  fontSize: 12,
+                                  fontFamily: "Poppins"),
+                            )),
+                      ),
+                      SizedBox(width: Get.width * 0.048,),
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 4, horizontal: 10),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: AppColors.black),
+                              borderRadius: BorderRadius.circular(3),
+                              color: AppColors.white,
+                            ),
+                            child: const Text(
+                              "Chat",
+                              style: TextStyle(
+                                  color: AppColors.black,
+                                  fontSize: 12,
+                                  fontFamily: "Poppins"),
+                            )),
+                      ),
+                      SizedBox(width: Get.width * 0.048,),
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 4, horizontal: 10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(3),
+                              color: AppColors.blue,
+                            ),
+                            child: const Text(
+                              "View",
+                              style: TextStyle(
+                                  color: AppColors.white,
+                                  fontSize: 12,
+                                  fontFamily: "Poppins"),
+                            )),
+                      ),
+                    ],),
                   ),
-                ],)
+                )
               ],
             ),
           )),

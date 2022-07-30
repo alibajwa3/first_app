@@ -115,7 +115,7 @@ class CreateAccountScreen extends StatelessWidget {
           Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
             WhiteText(false, "Already have an account?", 14, FontWeight.w500,
                 AppColors.black),
-            FlatButtons(false, "Login", AppColors.blue),
+            FlatButtons(FontWeight.w500, false, "Login", AppColors.blue, onPressedFunction: null,),
           ])
         ]),
       ),

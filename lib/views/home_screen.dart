@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              const FlatButtons(true ,"See All", AppColors.blue)
+                              const FlatButtons(FontWeight.w500, true ,"See All", AppColors.blue, onPressedFunction: null,)
                             ],
                           ),
                           const SizedBox(
@@ -142,7 +142,7 @@ class HomeScreen extends StatelessWidget {
                     Expanded(child: Container(
                         alignment: Alignment.topLeft,
                         child: const WhiteText(false, "Popular Services", 16, FontWeight.w600, AppColors.black))),
-                    const FlatButtons(true, "See All", AppColors.blue),
+                    const FlatButtons(FontWeight.w500, true, "See All", AppColors.blue, onPressedFunction: null,),
                   ],
                 )),
             SizedBox(height: Get.height * 0.0180,),

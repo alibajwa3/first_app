@@ -11,4 +11,7 @@ class AppColors {
   static const gradientSecond = Color(0xff0075FF);
   static const greyColor = Color(0xffEDF2F8);
   static const goldenColor = Color(0xffFFB800);
+  static const backgroundColor = Color(0xffF1F1F1);
+  static const redFont = Color(0xFFEE1A1A);
+  static const grey = Color(0xff555555);
 }

@@ -43,6 +43,7 @@ dependencies:
   searchfield: ^0.6.7
   favorite_button: ^0.0.4
   flutter_rating_bar: ^4.0.1
+  modal_bottom_sheet: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -100,6 +101,12 @@ flutter:
       - assets/images/logo_second_offer.png
       - assets/images/logo_third_offer.png
       - assets/images/bruce.png
+      - assets/images/backward_arrow_black.png
+      - assets/images/modal_bottom.png
+      - assets/images/orders.png
+      - assets/images/placeholder_orders.png
+      - assets/images/girl_back.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

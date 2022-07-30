@@ -75,7 +75,7 @@ class ConfirmEmailScreen extends StatelessWidget {
           Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
             WhiteText(false,
                 "Did you get the code?", 14, FontWeight.w500, AppColors.black,),
-            FlatButtons( false, "Please resend", AppColors.blue),
+            FlatButtons(FontWeight.w500, false, "Please resend", AppColors.blue, onPressedFunction: null),
           ]),
           const SizedBox(
             height: 30,

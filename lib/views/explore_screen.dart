@@ -15,141 +15,164 @@ class ExploreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: Get.height,
-      child: Column(
-        children: [
-          SizedBox(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(children: [
-                  SizedBox(
-                    height: Get.height * 0.1847,
-                    child: Stack(
-                      children: [
-                        const GradientContainer(false),
-                        Positioned(
-                            top: 40,
-                            left: 20,
-                            child: SizedBox(
-                              height: 27,
-                              width: Get.width * 0.8933,
-                              child: Row(
-                                children:  const [
-                                  Expanded(
-                                      child: WhiteText(false, "Explore", 18,
-                                          FontWeight.w600, AppColors.white)),
-                                  Padding(
-                                    padding: EdgeInsets.only(right: 15),
-                                    child: IconButtonCustom(
-                                        "assets/images/notifications.png", null),
-                                  ),
-                                  IconButtonCustom("assets/images/maps_ugc.png", null)
-                                ],
-                              ),
-                            )),
-                        Positioned(
-                          top: 86,
+      child: Container(
+        child: SizedBox(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Column(children: [
+                SizedBox(
+                  // height: Get.height * 0.1847,
+                  child: Stack(
+                    children: [
+                      const GradientContainer(false),
+                      Positioned(
+                          top: 40,
                           left: 20,
-                          child: Container(
-                              decoration: const BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10))),
-                              child: const SearchBar("What you want to explore?")),
-                        ),
-                      ],
-                    ),
-                  ),
-                ]),
-                SizedBox(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        height: Get.height * 0.0246,
-                      ),
-                      SizedBox(
-                        child: Row(
-                          children: [
-                            const Expanded(
-                              child: Padding(
-                                padding: EdgeInsets.only(left: 20),
-                                child: WhiteText(false, "Profiles", 16, FontWeight.w800,
-                                    AppColors.black),
-                              ),
+                          child: SizedBox(
+                            height: 27,
+                            width: Get.width * 0.8933,
+                            child: Row(
+                              children:  const [
+                                Expanded(
+                                    child: WhiteText(false, "Explore", 18,
+                                        FontWeight.w600, AppColors.white)),
+                                Padding(
+                                  padding: EdgeInsets.only(right: 15),
+                                  child: IconButtonCustom(
+                                      "assets/images/notifications.png", null),
+                                ),
+                                IconButtonCustom("assets/images/maps_ugc.png", null)
+                              ],
                             ),
-                            const Padding(
-                              padding: EdgeInsets.only(right: 20),
-                              child: FlatButtons(true, "See All", AppColors.blue),
-                            ),
-                            SizedBox(
-                              height: Get.height * 0.01847,
-                            ),
-                          ],
-                        ),
+                          )),
+                      Positioned(
+                        top: 86,
+                        left: 20,
+                        child: Container(
+                            decoration: const BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10))),
+                            child: const SearchBar("What you want to explore?")),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: Get.height * 0.0184729064,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 20),
-                  child: SizedBox(
-                    height: Get.height * 0.3017,
-                    child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      children: const [
-                        ProfilesWidget(
-                            "App Developer",
-                            "Pakistan",
-                            825,
-                            15,
-                            "I will develop Flutter app for you",
-                            "Ali Bajwa",
-                            "assets/images/bruce.png"),
-                        ProfilesWidget(
-                            "App Developer",
-                            "Pakistan",
-                            825,
-                            15,
-                            "I will develop Flutter app for you",
-                            "Ali Bajwa",
-                            "assets/images/bruce.png"),
-                      ],
+              ]),
+              SizedBox(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: Get.height * 0.0246,
                     ),
-                  ),
+                    SizedBox(
+                      child: Row(
+                        children: [
+                          const Expanded(
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 20),
+                              child: WhiteText(false, "Profiles", 16, FontWeight.w800,
+                                  AppColors.black),
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.only(right: 20),
+                            child: FlatButtons(FontWeight.w500, true, "See All", AppColors.blue, onPressedFunction: null,),
+                          ),
+                          SizedBox(
+                            height: Get.height * 0.01847,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  height: Get.height * 0.0246,
-                ),
-                SizedBox(
-                  child: Row(
-                    children: [
-                      const Expanded(
-                        child: Padding(
-                          padding: EdgeInsets.only(left: 20),
-                          child: WhiteText(
-                              false, "Profiles", 16, FontWeight.w800, AppColors.black),
-                        ),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.only(right: 20),
-                        child: FlatButtons(true, "See All", AppColors.blue),
-                      ),
-                      SizedBox(
-                        height: Get.height * 0.01847,
-                      ),
+              ),
+              SizedBox(
+                height: Get.height * 0.0184729064,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: SizedBox(
+                  height: Get.height * 0.3017,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: const [
+                      ProfilesWidget(
+                          "App Developer",
+                          "Pakistan",
+                          825,
+                          15,
+                          "I will develop Flutter app for you",
+                          "Ali Bajwa",
+                          "assets/images/bruce.png"),
+                      ProfilesWidget(
+                          "App Developer",
+                          "Pakistan",
+                          825,
+                          15,
+                          "I will develop Flutter app for you",
+                          "Ali Bajwa",
+                          "assets/images/bruce.png"),
                     ],
                   ),
                 ),
-              ],
-            ),
-          ),
+              ),
+              SizedBox(
+                height: Get.height * 0.0246,
+              ),
+              SizedBox(
+                child: Row(
+                  children: const [
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 20),
+                        child: WhiteText(
+                            false, "Gigs", 16, FontWeight.w800, AppColors.black),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 20),
+                      child: FlatButtons(FontWeight.w500, true, "See All", AppColors.blue, onPressedFunction: null,),
+                    ),
 
-        ],
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: Get.height * 0.01847,
+              ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  child: GridView.count(
+                    padding: EdgeInsets.zero,
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 5.5,
+                    mainAxisSpacing: 5.5,
+                    children: const [
+                      GigsWidget( "assets/images/girl.png",
+                          5, 100, 34, "I will design a beautiful logo for you"),
+                      GigsWidget( "assets/images/girl.png",
+                          5, 100, 34, "I will design a beautiful app for you"),
+                      GigsWidget( "assets/images/girl.png",
+                          5, 100, 34, "I will design a beautiful logo for you"),
+                      GigsWidget( "assets/images/girl.png",
+                          5, 100, 34, "I will design a beautiful app for you"),
+                      GigsWidget( "assets/images/girl.png",
+                          5, 100, 34, "I will design a beautiful logo for you"),
+                      GigsWidget( "assets/images/girl.png",
+                          5, 100, 34, "I will design a beautiful app for you"),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

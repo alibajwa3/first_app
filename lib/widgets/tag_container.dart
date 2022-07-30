@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import '../constant/colors.dart';
 
 class TagContainer extends StatelessWidget {
-  final tagTitle;
-  const TagContainer(this.tagTitle, {Key? key}) : super(key: key);
+  final String tagTitle;
+  final double fontSize;
+  const TagContainer(this.fontSize, this.tagTitle, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class TagContainer extends StatelessWidget {
         child: Container(
           color: AppColors.greyColor,
           padding: const EdgeInsets.all(4.5),
-          child: WhiteText(true, tagTitle, 10, FontWeight.w400, AppColors.black),
+          child: WhiteText(true, tagTitle, fontSize, FontWeight.w400, AppColors.black),
         ),
       ),
     );
