@@ -3,6 +3,7 @@ import 'package:first_app/views/explore_screen.dart';
 import 'package:first_app/views/home_screen.dart';
 import 'package:first_app/views/offers_screen.dart';
 import 'package:first_app/views/orders_screen.dart';
+import 'package:first_app/views/profile_log_in.dart';
 import 'package:first_app/views/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:first_app/controller/bottom_bar_controller.dart';
@@ -15,7 +16,7 @@ class NavigationPage extends StatelessWidget {
   BottomNavigationController bottomNavigationController = Get.put(BottomNavigationController());
   NavigationPage({Key? key}) : super(key: key);
 
-  final screen = [HomeScreen(), OffersScreen(), ExploreScreen(), OrdersScreen(), ProfileScreen()];
+  final screen = [HomeScreen(), OffersScreen(), ExploreScreen(), OrdersScreen(), ProfileLoginScreen("assets/images/bruce_large.png")];
 
   @override
   Widget build(BuildContext context) {

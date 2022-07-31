@@ -1,3 +1,4 @@
+import 'package:first_app/model/profiles.dart';
 import 'package:first_app/widgets/flat_buttons.dart';
 import 'package:first_app/widgets/gigs.dart';
 import 'package:first_app/widgets/profiles.dart';
@@ -34,7 +35,7 @@ class ExploreScreen extends StatelessWidget {
                             height: 27,
                             width: Get.width * 0.8933,
                             child: Row(
-                              children:  const [
+                              children: const [
                                 Expanded(
                                     child: WhiteText(false, "Explore", 18,
                                         FontWeight.w600, AppColors.white)),
@@ -43,7 +44,8 @@ class ExploreScreen extends StatelessWidget {
                                   child: IconButtonCustom(
                                       "assets/images/notifications.png", null),
                                 ),
-                                IconButtonCustom("assets/images/maps_ugc.png", null)
+                                IconButtonCustom(
+                                    "assets/images/maps_ugc.png", null)
                               ],
                             ),
                           )),
@@ -55,7 +57,8 @@ class ExploreScreen extends StatelessWidget {
                                 color: Colors.white,
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(10))),
-                            child: const SearchBar("What you want to explore?")),
+                            child:
+                                const SearchBar("What you want to explore?")),
                       ),
                     ],
                   ),
@@ -74,13 +77,19 @@ class ExploreScreen extends StatelessWidget {
                           const Expanded(
                             child: Padding(
                               padding: EdgeInsets.only(left: 20),
-                              child: WhiteText(false, "Profiles", 16, FontWeight.w800,
-                                  AppColors.black),
+                              child: WhiteText(false, "Profiles", 16,
+                                  FontWeight.w800, AppColors.black),
                             ),
                           ),
                           const Padding(
                             padding: EdgeInsets.only(right: 20),
-                            child: FlatButtons(FontWeight.w500, true, "See All", AppColors.blue, onPressedFunction: null,),
+                            child: FlatButtons(
+                              FontWeight.w500,
+                              true,
+                              "See All",
+                              AppColors.blue,
+                              onPressedFunction: null,
+                            ),
                           ),
                           SizedBox(
                             height: Get.height * 0.01847,
@@ -97,29 +106,22 @@ class ExploreScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 20),
                 child: SizedBox(
-                  height: Get.height * 0.3017,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: const [
-                      ProfilesWidget(
-                          "App Developer",
-                          "Pakistan",
-                          825,
-                          15,
-                          "I will develop Flutter app for you",
-                          "Ali Bajwa",
-                          "assets/images/bruce.png"),
-                      ProfilesWidget(
-                          "App Developer",
-                          "Pakistan",
-                          825,
-                          15,
-                          "I will develop Flutter app for you",
-                          "Ali Bajwa",
-                          "assets/images/bruce.png"),
-                    ],
-                  ),
-                ),
+                    height: Get.height * 0.3017,
+                    child: ListView.builder(
+                      padding: EdgeInsets.zero,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: PROFILES_LIST.length,
+                      itemBuilder: (context, index) {
+                        return ProfilesWidget(
+                            PROFILES_LIST[index].designation,
+                            PROFILES_LIST[index].location,
+                            PROFILES_LIST[index].numberOfReviews,
+                            PROFILES_LIST[index].offerPrice,
+                            PROFILES_LIST[index].profileDescription,
+                            PROFILES_LIST[index].profileName,
+                            PROFILES_LIST[index].imageAssetPath);
+                      },
+                    )),
               ),
               SizedBox(
                 height: Get.height * 0.0246,
@@ -130,15 +132,20 @@ class ExploreScreen extends StatelessWidget {
                     Expanded(
                       child: Padding(
                         padding: EdgeInsets.only(left: 20),
-                        child: WhiteText(
-                            false, "Gigs", 16, FontWeight.w800, AppColors.black),
+                        child: WhiteText(false, "Gigs", 16, FontWeight.w800,
+                            AppColors.black),
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.only(right: 20),
-                      child: FlatButtons(FontWeight.w500, true, "See All", AppColors.blue, onPressedFunction: null,),
+                      child: FlatButtons(
+                        FontWeight.w500,
+                        true,
+                        "See All",
+                        AppColors.blue,
+                        onPressedFunction: null,
+                      ),
                     ),
-
                   ],
                 ),
               ),
@@ -154,18 +161,18 @@ class ExploreScreen extends StatelessWidget {
                     crossAxisSpacing: 5.5,
                     mainAxisSpacing: 5.5,
                     children: const [
-                      GigsWidget( "assets/images/girl.png",
-                          5, 100, 34, "I will design a beautiful logo for you"),
-                      GigsWidget( "assets/images/girl.png",
-                          5, 100, 34, "I will design a beautiful app for you"),
-                      GigsWidget( "assets/images/girl.png",
-                          5, 100, 34, "I will design a beautiful logo for you"),
-                      GigsWidget( "assets/images/girl.png",
-                          5, 100, 34, "I will design a beautiful app for you"),
-                      GigsWidget( "assets/images/girl.png",
-                          5, 100, 34, "I will design a beautiful logo for you"),
-                      GigsWidget( "assets/images/girl.png",
-                          5, 100, 34, "I will design a beautiful app for you"),
+                      GigsWidget("assets/images/girl.png", 5, 100, 34,
+                          "I will design a beautiful logo for you"),
+                      GigsWidget("assets/images/girl.png", 5, 100, 34,
+                          "I will design a beautiful app for you"),
+                      GigsWidget("assets/images/girl.png", 5, 100, 34,
+                          "I will design a beautiful logo for you"),
+                      GigsWidget("assets/images/girl.png", 5, 100, 34,
+                          "I will design a beautiful app for you"),
+                      GigsWidget("assets/images/girl.png", 5, 100, 34,
+                          "I will design a beautiful logo for you"),
+                      GigsWidget("assets/images/girl.png", 5, 100, 34,
+                          "I will design a beautiful app for you"),
                     ],
                   ),
                 ),

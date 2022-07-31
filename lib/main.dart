@@ -3,6 +3,7 @@ import 'package:first_app/views/confirm_email.dart';
 import 'package:first_app/views/create_account.dart';
 import 'package:first_app/views/dummy_view.dart';
 import 'package:first_app/views/explore_screen.dart';
+import 'package:first_app/views/favorite_profiles.dart';
 import 'package:first_app/views/home_screen.dart';
 import 'package:first_app/views/image_picker.dart';
 import 'package:first_app/views/login_screen.dart';
@@ -10,22 +11,33 @@ import 'package:first_app/views/logo_design.dart';
 import 'package:first_app/views/navigation_bar.dart';
 import 'package:first_app/views/offers_screen.dart';
 import 'package:first_app/views/orders_screen.dart';
+import 'package:first_app/views/profile_log_in.dart';
+import 'package:first_app/views/profile_log_out.dart';
 import 'package:first_app/views/welcome_screen.dart';
+import 'package:first_app/widgets/account_tile.dart';
+import 'package:first_app/widgets/account_widget.dart';
 import 'package:first_app/widgets/general_tile.dart';
+import 'package:first_app/widgets/general_widget.dart';
 import 'package:first_app/widgets/gigs.dart';
 import 'package:first_app/widgets/gradient_container.dart';
 import 'package:first_app/widgets/custom_offers_widgets.dart';
 import 'package:first_app/widgets/header.dart';
+import 'package:first_app/widgets/header_with_search_bar.dart';
 import 'package:first_app/widgets/modal_bottom.dart';
 import 'package:first_app/widgets/orders.dart';
 import 'package:first_app/widgets/profiles.dart';
 import 'package:first_app/widgets/profiles_on_logo_design_screen.dart';
 import 'package:first_app/widgets/profiles_on_logo_design_second.dart';
+import 'package:first_app/widgets/rate_us.dart';
 import 'package:first_app/widgets/services_tile.dart';
+import 'package:first_app/widgets/switch_profile.dart';
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+
+import 'constant/colors.dart';
 
 
 void main() {
@@ -41,28 +53,11 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-          // This is the theme of your application.
-          //
-          // Try running your application with "flutter run". You'll see the
-          // application has a blue toolbar. Then, without quitting the app, try
-          // changing the primarySwatch below to Colors.green and then invoke
-          // "hot reload" (press "r" in the console where you ran "flutter run",
-          // or simply save your changes to "hot reload" in a Flutter IDE).
-          // Notice that the counter didn't reset back to zero; the application
-          // is not restarted.
-          primarySwatch: Colors.blue,
+
         ),
         home: Scaffold(
-body: NavigationPage())
-          // body: Card(
-          //     elevation: 2,
-          //     child: Orders( 23, "bajwa78", "I will make a Flutter app for you. Feel free to contact me",24, "assets/images/orders.png")),
 
-          // ProfilesOnLogoDesignSecond("App Developer", "Pakistan", 47, 10, "I will develop Flutter app for you"
-          //     , "Ali Bajwa", "assets/images/bruce.png", ),
-
-
-          // ProfilesWidget("Graphic Designer", "Pakistan", 825, 45, "hjsjahd", "Ali Bajwa", "assets/images/bruce.png"))
+          body: NavigationPage())
 
         );
   }

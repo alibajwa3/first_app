@@ -16,7 +16,7 @@ class CustomOffersWidget extends StatelessWidget {
     return Material(
       elevation: 1,
       child: SizedBox(
-        width: Get.width * 0.89,
+        width: 335,
         child: Row(
           children: [
             SizedBox(
@@ -26,51 +26,38 @@ class CustomOffersWidget extends StatelessWidget {
             ),
             SizedBox(
               height: 120,
-              width: Get.width * 0.5733,
+              width: 215,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(
-                      left: 15,
+                      left: 15, top: 15
                     ),
-                    child: WhiteText(
-                        false,
-                        offerDescription,
-                        14,
-                        FontWeight.w800,
-                        AppColors.black),
+                    child: SizedBox(
+                      height: 42,
+                      width: 169,
+                      child: WhiteText(
+                          false,
+                          offerDescription,
+                          14,
+                          FontWeight.w800,
+                          AppColors.black),
+                    ),
                   ),
-                  const SizedBox(
-                    height: 40,
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 15),
-                          child: WhiteText(false, '$offerPrice\$', 14,
-                              FontWeight.w600, AppColors.black),
-                        ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 29, left: 15),
+                    child: SizedBox(
+                      child: Row(
+                        children: [
+                          const WhiteText(false, "Started: ", 14, FontWeight.w400, AppColors.greyText),
+                          WhiteText(false, '$offerPrice\$', 14,
+                              FontWeight.w600, AppColors.blue),
+
+                        ],
                       ),
-                      InkWell(
-                        onTap: () {},
-                        child: Container(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 4, horizontal: 10),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(3),
-                              color: AppColors.blue,
-                            ),
-                            child: const Text(
-                              "View",
-                              style: TextStyle(
-                                  color: AppColors.white,
-                                  fontSize: 12,
-                                  fontFamily: "Poppins"),
-                            )),
-                      ),
-                    ],
+                    ),
                   )
                 ],
               ),

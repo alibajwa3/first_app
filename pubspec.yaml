@@ -106,6 +106,31 @@ flutter:
       - assets/images/orders.png
       - assets/images/placeholder_orders.png
       - assets/images/girl_back.png
+      - assets/images/person.png
+      - assets/images/favorite.png
+      - assets/images/grid_view.png
+      - assets/images/interests.png
+      - assets/images/hires.png
+      - assets/images/forward_button_acc_screen.png
+      - assets/images/language.png
+      - assets/images/active_status.png
+      - assets/images/notification_blue.png
+      - assets/images/card_travel.png
+      - assets/images/bruce_large.png
+      - assets/images/shield.png
+      - assets/images/share.png
+      - assets/images/hotel_class.png
+      - assets/images/chat.png
+      - assets/images/mark_email_unread.png
+      - assets/images/info.png
+      - assets/images/verified_user.png
+      - assets/images/radio.png
+      - assets/images/target.png
+      - assets/images/radio_button.png
+      - assets/images/cross.png
+      - assets/images/search_icon.png
+      - assets/images/back_arrow_downloaded.png
+      - assets/images/maria.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
